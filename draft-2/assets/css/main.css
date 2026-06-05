@@ -173,8 +173,8 @@ h1, h2, h3 { font-weight: 300; line-height: 1.05; letter-spacing: -0.025em; }
 @keyframes glowSpin { to { transform: rotate(360deg); } }
 .lung-ring { position: absolute; inset: 2%; border: 1px solid var(--line); border-radius: 50%; }
 .lung-ring.r2 { inset: -8%; border-style: dashed; border-color: var(--line-soft); animation: glowSpin 60s linear infinite; }
-.lung-svg { position: relative; width: 64%; z-index: 2; animation: breathe 6s ease-in-out infinite; transform-origin: 50% 46%; }
-@keyframes breathe { 0%, 100% { transform: scale(0.97); } 50% { transform: scale(1.03); } }
+.lung-img { position: relative; width: 82%; max-width: 480px; z-index: 2; animation: breathe 6s ease-in-out infinite; transform-origin: 50% 48%; filter: drop-shadow(0 30px 50px rgba(20,22,26,0.14)); }
+@keyframes breathe { 0%, 100% { transform: scale(0.975); } 50% { transform: scale(1.025); } }
 
 /* bronchial airflow animation */
 .airway { stroke-dasharray: 4 7; animation: flow 2.4s linear infinite; }

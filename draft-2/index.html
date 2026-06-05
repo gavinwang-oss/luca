@@ -101,62 +101,7 @@
       <div class="lung-ring r2"></div>
       <div class="lung-ring"></div>
 
-      <svg class="lung-svg" viewBox="0 0 240 240" aria-label="AI respiratory analysis" role="img">
-        <defs>
-          <linearGradient id="lungFill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
-            <stop offset="1" stop-color="#EAF6FC" stop-opacity="0.85"/>
-          </linearGradient>
-          <linearGradient id="lungStroke" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#009EDF"/><stop offset="1" stop-color="#8C5BF6"/>
-          </linearGradient>
-        </defs>
-
-        <!-- trachea + smooth Y bronchi -->
-        <path d="M120 24 L120 58" fill="none" stroke="url(#lungStroke)" stroke-width="6" stroke-linecap="round"/>
-        <path d="M120 58 C120 74 110 82 100 92 M120 58 C120 74 130 82 140 92"
-              fill="none" stroke="url(#lungStroke)" stroke-width="5" stroke-linecap="round"/>
-
-        <!-- left lung lobe (curves inward at top toward bronchus, bulges out & down) -->
-        <path d="M100 92
-                 C 86 96 64 108 52 134
-                 C 42 156 44 188 60 204
-                 C 72 216 92 214 98 198
-                 C 104 182 104 150 104 120
-                 C 104 106 104 96 100 92 Z"
-              fill="url(#lungFill)" stroke="url(#lungStroke)" stroke-width="2.6" stroke-linejoin="round"/>
-        <!-- right lung lobe (mirror) -->
-        <path d="M140 92
-                 C 154 96 176 108 188 134
-                 C 198 156 196 188 180 204
-                 C 168 216 148 214 142 198
-                 C 136 182 136 150 136 120
-                 C 136 106 136 96 140 92 Z"
-              fill="url(#lungFill)" stroke="url(#lungStroke)" stroke-width="2.6" stroke-linejoin="round"/>
-
-        <!-- bronchial airway trees (animated airflow) -->
-        <g class="airway" fill="none" stroke="#009EDF" stroke-width="2" stroke-linecap="round" opacity="0.8">
-          <path d="M100 92 C96 112 90 130 82 150
-                   M93 120 C86 124 80 126 72 126
-                   M88 138 C82 146 76 152 70 158
-                   M84 158 C80 170 78 182 76 192"/>
-          <path d="M140 92 C144 112 150 130 158 150
-                   M147 120 C154 124 160 126 168 126
-                   M152 138 C158 146 164 152 170 158
-                   M156 158 C160 170 162 182 164 192"/>
-        </g>
-
-        <!-- AI scan nodes -->
-        <g>
-          <circle cx="82" cy="150" r="4" fill="#009EDF"/>
-          <circle cx="158" cy="150" r="4" fill="#8C5BF6"/>
-          <circle cx="70" cy="158" r="3.2" fill="#009EDF"/>
-          <circle cx="170" cy="158" r="3.2" fill="#FF9DB6"/>
-          <circle cx="76" cy="192" r="3" fill="#009EDF"/>
-          <circle cx="164" cy="192" r="3" fill="#8C5BF6"/>
-          <circle cx="120" cy="58" r="4" fill="#009EDF"/>
-        </g>
-      </svg>
+      <img class="lung-img" src="assets/img/lung-3d.png" alt="3D visualization of human lungs with AI-analyzed airways" />
 
       <div class="lung-chip c1"><svg><use href="#i-signal"/></svg> Acoustic biomarker detected</div>
       <div class="lung-chip c2"><span class="dot"></span> Airflow pattern analysed</div>

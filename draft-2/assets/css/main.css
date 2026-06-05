@@ -166,15 +166,15 @@ h1, h2, h3 { font-weight: 300; line-height: 1.05; letter-spacing: -0.025em; }
 .lung-glow {
   position: absolute; inset: 4%; border-radius: 50%;
   background: conic-gradient(from 200deg, var(--iri-1), var(--iri-2), var(--iri-3), var(--iri-4), var(--iri-1));
-  filter: blur(46px); opacity: 0.55;
+  filter: blur(54px); opacity: 0.34;
   animation: glowSpin 26s linear infinite, breathe 6s ease-in-out infinite;
 }
-.lung-glow.soft { inset: 16%; opacity: 0.4; filter: blur(30px); animation-direction: reverse; animation-duration: 32s, 6s; }
+.lung-glow.soft { inset: 18%; opacity: 0.26; filter: blur(34px); animation-direction: reverse; animation-duration: 32s, 6s; }
 @keyframes glowSpin { to { transform: rotate(360deg); } }
 .lung-ring { position: absolute; inset: 2%; border: 1px solid var(--line); border-radius: 50%; }
 .lung-ring.r2 { inset: -8%; border-style: dashed; border-color: var(--line-soft); animation: glowSpin 60s linear infinite; }
-.lung-img { position: relative; width: 82%; max-width: 480px; z-index: 2; animation: breathe 6s ease-in-out infinite; transform-origin: 50% 48%; filter: drop-shadow(0 30px 50px rgba(20,22,26,0.14)); }
-@keyframes breathe { 0%, 100% { transform: scale(0.975); } 50% { transform: scale(1.025); } }
+.lung-img { position: relative; width: 92%; max-width: 540px; z-index: 2; animation: breathe 6s ease-in-out infinite; transform-origin: 50% 48%; filter: drop-shadow(0 26px 46px rgba(20,22,26,0.12)); }
+@keyframes breathe { 0%, 100% { transform: scale(0.985); } 50% { transform: scale(1.015); } }
 
 /* bronchial airflow animation */
 .airway { stroke-dasharray: 4 7; animation: flow 2.4s linear infinite; }

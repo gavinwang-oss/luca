@@ -339,6 +339,55 @@ h1, h2, h3 { font-weight: 300; line-height: 1.05; letter-spacing: -0.025em; }
 }
 
 /* =============================================================
+   Contact page
+   ============================================================= */
+.contact-hero { padding-bottom: 8px; }
+.contact-sec { padding-top: 48px; }
+.contact-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: start; }
+.contact-aside { position: relative; }
+.contact-photo { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4 / 5; background: var(--bg-3); }
+.contact-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.contact-points { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.contact-points li { display: flex; gap: 12px; align-items: flex-start; font-size: var(--step-0); color: var(--ink-soft); line-height: 1.4; }
+.contact-points svg { width: 19px; height: 19px; color: var(--accent); flex: none; margin-top: 3px; }
+.contact-locations { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 26px; }
+.contact-locations span { display: inline-flex; align-items: center; gap: 7px; font-size: var(--step--1); color: var(--ink-muted); }
+.contact-locations svg { width: 15px; height: 15px; color: var(--accent-deep); }
+
+.contact-form-wrap { background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 38px 36px; }
+.contact-form { display: flex; flex-direction: column; gap: 22px; }
+.cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.cf-field { display: flex; flex-direction: column; gap: 8px; }
+.cf-field label { font-size: var(--step--1); font-weight: 500; color: var(--ink); }
+.req { color: var(--accent-deep); }
+.cf-field input, .cf-select select {
+  width: 100%; font: inherit; font-size: var(--step-0); color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 13px 15px; transition: border-color .25s, box-shadow .25s;
+  -webkit-appearance: none; appearance: none;
+}
+.cf-field input::placeholder { color: var(--ink-muted); }
+.cf-field input:focus, .cf-select select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,158,223,0.14); }
+.cf-select { position: relative; }
+.cf-select svg { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--ink-muted); pointer-events: none; }
+.cf-select select { padding-right: 40px; cursor: pointer; }
+.cf-check { display: flex; gap: 12px; align-items: flex-start; font-size: var(--step--1); color: var(--ink-soft); line-height: 1.45; cursor: pointer; }
+.cf-check input { flex: none; width: 18px; height: 18px; margin-top: 2px; accent-color: var(--accent); }
+.cf-privacy { font-size: 12.5px; line-height: 1.55; color: var(--ink-muted); margin: 0; }
+.cf-privacy a { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 2px; }
+.cf-submit { align-self: flex-start; }
+.cf-note { font-size: var(--step--1); color: var(--accent-deep); margin: 0; }
+
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+  .contact-photo { aspect-ratio: 16 / 10; max-height: 320px; }
+}
+@media (max-width: 560px) {
+  .cf-row { grid-template-columns: 1fr; gap: 22px; }
+  .contact-form-wrap { padding: 26px 20px; }
+}
+
+/* =============================================================
    Stats band
    ============================================================= */
 .stats-band { background: var(--bg-2); }

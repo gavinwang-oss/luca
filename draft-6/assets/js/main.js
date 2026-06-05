@@ -39,4 +39,17 @@
       if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
+
+  /* Contact form (design preview — not wired to a live endpoint) */
+  const cf = document.getElementById('contactForm');
+  if (cf) {
+    cf.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!cf.checkValidity()) { cf.reportValidity(); return; }
+      const note = document.getElementById('cfNote');
+      if (note) note.hidden = false;
+      const btn = cf.querySelector('.cf-submit');
+      if (btn) { btn.disabled = true; btn.style.opacity = '0.6'; }
+    });
+  }
 })();

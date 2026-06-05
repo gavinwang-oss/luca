@@ -168,15 +168,30 @@
       </div>
 
       <div class="flywheel reveal" data-delay="1">
-        <svg class="flywheel-svg" viewBox="0 0 760 470" role="img" aria-label="Luca Intelligence Platform flywheel: Data, Decision and AI Interaction in a continuous loop">
+        <svg class="flywheel-svg" viewBox="0 0 760 470" role="img" aria-label="Luca Intelligence Platform flywheel: Data, Decision and AI Interaction in a continuous, self-reinforcing loop">
           <defs>
+            <radialGradient id="fw-grad" cx="34%" cy="26%" r="86%">
+              <stop offset="0" stop-color="#7FD8FA"/>
+              <stop offset="0.42" stop-color="#0FA3E2"/>
+              <stop offset="1" stop-color="#005E8C"/>
+            </radialGradient>
+            <filter id="fw-shadow" x="-40%" y="-40%" width="180%" height="180%">
+              <feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#0077B0" flood-opacity="0.30"/>
+            </filter>
+            <filter id="fw-glow" x="-150%" y="-150%" width="400%" height="400%">
+              <feGaussianBlur stdDeviation="3.4" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
             <marker id="fw-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-              <path d="M0 0 L10 5 L0 10 z" fill="#0077B0"/>
+              <path d="M0 0 L10 5 L0 10 z" fill="#3FAEDC"/>
             </marker>
           </defs>
 
+          <!-- flywheel rim -->
+          <circle class="fw-rim" cx="380" cy="275" r="168"/>
+
           <!-- looping arrows: Data -> Decision -> AI Interaction -> Data -->
-          <g fill="none" stroke="#0077B0" stroke-width="2.6" marker-end="url(#fw-arrow)" opacity="0.6">
+          <g class="fw-arrows" marker-end="url(#fw-arrow)">
             <path d="M473.9 135.7 A 168 168 0 0 1 547.6 263.3"/>
             <path d="M453.6 426.0 A 168 168 0 0 1 306.4 426.0"/>
             <path d="M212.4 263.3 A 168 168 0 0 1 286.1 135.7"/>
@@ -186,25 +201,37 @@
           <text x="380" y="268" text-anchor="middle" class="fw-center-1">Luca</text>
           <text x="380" y="296" text-anchor="middle" class="fw-center-2">Intelligence Platform</text>
 
+          <!-- traveling energy comet (orbits clockwise, absorbed into each node) -->
+          <g class="fw-orbit">
+            <circle class="fw-trail t3" r="3.2"><animateMotion dur="9s" begin="-8.64s" repeatCount="indefinite" path="M380,107 A168,168 0 1 1 380,443 A168,168 0 1 1 380,107"/></circle>
+            <circle class="fw-trail t2" r="3.8"><animateMotion dur="9s" begin="-8.76s" repeatCount="indefinite" path="M380,107 A168,168 0 1 1 380,443 A168,168 0 1 1 380,107"/></circle>
+            <circle class="fw-trail t1" r="4.4"><animateMotion dur="9s" begin="-8.88s" repeatCount="indefinite" path="M380,107 A168,168 0 1 1 380,443 A168,168 0 1 1 380,107"/></circle>
+            <circle class="fw-orb-halo" r="12"><animateMotion dur="9s" repeatCount="indefinite" path="M380,107 A168,168 0 1 1 380,443 A168,168 0 1 1 380,107"/></circle>
+            <circle class="fw-orb-core" r="4.6"><animateMotion dur="9s" repeatCount="indefinite" path="M380,107 A168,168 0 1 1 380,443 A168,168 0 1 1 380,107"/></circle>
+          </g>
+
           <!-- Node 1 — Data (top) -->
-          <g class="fw-node">
-            <circle cx="380" cy="107" r="90" class="fw-circle"/>
+          <g class="fw-node" style="--d:0s">
+            <circle class="fw-halo" cx="380" cy="107" r="90"/>
+            <circle class="fw-circle" cx="380" cy="107" r="90"/>
             <text x="380" y="95" text-anchor="middle" class="fw-title">Data</text>
             <text x="380" y="122" text-anchor="middle" class="fw-sub">Multimodal —</text>
             <text x="380" y="142" text-anchor="middle" class="fw-sub">clinical + wearables</text>
           </g>
 
           <!-- Node 2 — Decision (bottom right) -->
-          <g class="fw-node">
-            <circle cx="525.5" cy="359" r="90" class="fw-circle"/>
+          <g class="fw-node" style="--d:3s">
+            <circle class="fw-halo" cx="525.5" cy="359" r="90"/>
+            <circle class="fw-circle" cx="525.5" cy="359" r="90"/>
             <text x="525.5" y="347" text-anchor="middle" class="fw-title">Decision</text>
             <text x="525.5" y="374" text-anchor="middle" class="fw-sub">Digital biomarker</text>
             <text x="525.5" y="394" text-anchor="middle" class="fw-sub">(medical device)</text>
           </g>
 
           <!-- Node 3 — AI Interaction (bottom left) -->
-          <g class="fw-node">
-            <circle cx="234.5" cy="359" r="90" class="fw-circle"/>
+          <g class="fw-node" style="--d:6s">
+            <circle class="fw-halo" cx="234.5" cy="359" r="90"/>
+            <circle class="fw-circle" cx="234.5" cy="359" r="90"/>
             <text x="234.5" y="347" text-anchor="middle" class="fw-title">AI Interaction</text>
             <text x="234.5" y="374" text-anchor="middle" class="fw-sub">AI physician —</text>
             <text x="234.5" y="394" text-anchor="middle" class="fw-sub">continuous care</text>

@@ -268,15 +268,47 @@ h1, h2, h3 { font-weight: 300; line-height: 1.05; letter-spacing: -0.025em; }
 .plat-head .lead { color: var(--ink-soft); font-size: var(--step-1); margin-top: 22px; }
 .flywheel { max-width: 680px; margin: 40px auto 0; }
 .flywheel-svg { width: 100%; height: auto; overflow: visible; }
-.fw-circle { fill: var(--accent); stroke: #fff; stroke-width: 3; }
-.fw-node { transform-box: fill-box; transform-origin: center; animation: fwPulse 6s ease-in-out infinite; }
-.fw-node:nth-of-type(2) { animation-delay: 2s; }
-.fw-node:nth-of-type(3) { animation-delay: 4s; }
-@keyframes fwPulse { 0%, 100% { opacity: 0.94; } 50% { opacity: 1; } }
+
+/* flywheel rim — faint guide ring under the loop */
+.fw-rim { fill: none; stroke: var(--accent); stroke-width: 1.2; opacity: 0.14; }
+
+/* connector arcs — flowing dashed current */
+.fw-arrows path { fill: none; stroke: #3FAEDC; stroke-width: 2.6; opacity: 0.55;
+  stroke-dasharray: 7 9; animation: fwFlow 1.1s linear infinite; }
+@keyframes fwFlow { to { stroke-dashoffset: -16; } }
+
+/* nodes — dimensional fill + soft shadow + gentle breathing */
+.fw-circle { fill: url(#fw-grad); stroke: #fff; stroke-width: 3; filter: url(#fw-shadow); }
+.fw-node { transform-box: fill-box; transform-origin: center;
+  animation: fwBreathe 6s ease-in-out infinite; animation-delay: var(--d, 0s); }
+@keyframes fwBreathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.018); } }
+
+/* node halo — pulses outward exactly when the comet arrives */
+.fw-halo { fill: none; stroke: var(--accent); stroke-width: 2.5; opacity: 0;
+  transform-box: fill-box; transform-origin: center;
+  animation: fwArrive 9s ease-out infinite; animation-delay: var(--d, 0s); }
+@keyframes fwArrive {
+  0%   { opacity: 0.75; transform: scale(1); }
+  16%  { opacity: 0;    transform: scale(1.22); }
+  100% { opacity: 0;    transform: scale(1.22); }
+}
+
+/* orbiting energy comet + fading trail */
+.fw-orb-core { fill: #fff; filter: url(#fw-glow); }
+.fw-orb-halo { fill: var(--accent); opacity: 0.28; filter: url(#fw-glow); }
+.fw-trail { fill: #6FD0F5; }
+.fw-trail.t1 { opacity: 0.55; } .fw-trail.t2 { opacity: 0.34; } .fw-trail.t3 { opacity: 0.18; }
+
 .fw-title { fill: #fff; font-family: var(--font); font-size: 23px; font-weight: 500; letter-spacing: -0.01em; }
-.fw-sub { fill: rgba(255,255,255,0.9); font-family: var(--font); font-size: 14px; font-weight: 400; }
+.fw-sub { fill: rgba(255,255,255,0.92); font-family: var(--font); font-size: 14px; font-weight: 400; }
 .fw-center-1 { fill: var(--ink); font-family: var(--font); font-size: 18px; font-weight: 600; letter-spacing: 0.02em; }
 .fw-center-2 { fill: var(--ink-muted); font-family: var(--font); font-size: 14px; font-weight: 500; letter-spacing: 0.04em; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fw-arrows path, .fw-node, .fw-halo, .fw-orbit { animation: none; }
+  .fw-orbit { display: none; }
+  .fw-arrows path { stroke-dasharray: none; opacity: 0.5; }
+}
 
 /* =============================================================
    Stats band

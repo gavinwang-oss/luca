@@ -366,11 +366,11 @@ h1, h2, h3 { font-weight: 300; line-height: 1.05; letter-spacing: -0.025em; }
 .lat-track { position: relative; height: 48px; background: var(--bg-3); border-radius: 10px; overflow: hidden; }
 .lat-bar {
   height: 100%; min-width: 96px; border-radius: 10px;
-  background: var(--bg); border: 1px solid var(--line);
+  background: #82C8EC; border: 1px solid rgba(0,158,223,0.4);
   display: flex; align-items: center; padding: 0 16px;
   transition: width 1s var(--ease);
 }
-.lat-time { font-size: var(--step--1); font-weight: 600; color: var(--ink-soft); white-space: nowrap; }
+.lat-time { font-size: var(--step--1); font-weight: 600; color: var(--accent-deep); white-space: nowrap; }
 .lat-best .lat-bar { background: var(--accent); border-color: transparent; box-shadow: 0 10px 26px -12px rgba(0,158,223,0.6); }
 .lat-best .lat-time { color: #fff; }
 .lat-best .lat-source { color: var(--accent-deep); }

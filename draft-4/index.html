@@ -87,11 +87,24 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <span class="eyebrow hero-eyebrow">AI-Powered Health Intelligence</span>
-    <h1 class="display">Decoding health, <em>one breath</em> at a time.</h1>
-    <p class="hero-sub">Luca Healthcare builds AI and machine-learning systems that turn everyday signals — like the sound of a breath — into predictive, clinical-grade health intelligence.</p>
-    <div class="hero-ctas">
-      <a href="#platform" class="btn btn-fill">Explore the platform <svg><use href="#i-arrow"/></svg></a>
-      <a href="#contact" class="btn btn-line">Get in touch</a>
+
+    <!-- Luca die: rolls between sentence fragments, typed in -->
+    <h1 class="visually-hidden">Decoding health, one biomarker at a time. Luca Healthcare turns everyday signals into clinical-grade intelligence.</h1>
+    <div class="hero-head">
+      <div class="dice-row">
+        <div class="dice-text dice-left" id="diceLeft" aria-hidden="true"></div>
+        <div class="hero-cube-wrap" aria-hidden="true">
+          <div class="hero-cube" id="heroCube">
+            <div class="cube-face cf-front"></div>
+            <div class="cube-face cf-back"></div>
+            <div class="cube-face cf-right"></div>
+            <div class="cube-face cf-left"></div>
+            <div class="cube-face cf-top"></div>
+            <div class="cube-face cf-bottom"></div>
+          </div>
+        </div>
+        <div class="dice-text dice-right" id="diceRight" aria-hidden="true"></div>
+      </div>
     </div>
 
     <!-- Lung centerpiece -->

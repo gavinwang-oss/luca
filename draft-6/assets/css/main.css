@@ -174,7 +174,9 @@ h1, h2, h3 { font-weight: 300; line-height: 1.05; letter-spacing: -0.025em; }
 @keyframes glowSpin { to { transform: rotate(360deg); } }
 .lung-ring { position: absolute; inset: 2%; border: 1px solid var(--line); border-radius: 50%; }
 .lung-ring.r2 { inset: -8%; border-style: dashed; border-color: var(--line-soft); animation: glowSpin 60s linear infinite; }
-.lung-img { position: relative; width: 92%; max-width: 540px; z-index: 2; animation: breathe 6s ease-in-out infinite; transform-origin: 50% 48%; }
+.lung-img { position: relative; width: 92%; max-width: 540px; z-index: 2; animation: breathe 6s ease-in-out infinite; transform-origin: 50% 48%;
+  -webkit-mask-image: linear-gradient(to bottom, #000 68%, rgba(0,0,0,0.35) 82%, transparent 92%);
+  mask-image: linear-gradient(to bottom, #000 68%, rgba(0,0,0,0.35) 82%, transparent 92%); }
 @keyframes breathe { 0%, 100% { transform: scale(0.985); } 50% { transform: scale(1.015); } }
 
 /* animated AI network overlay */

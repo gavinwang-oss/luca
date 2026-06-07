@@ -554,7 +554,8 @@ h1, h2, h3 { font-weight: 300; line-height: 1.05; letter-spacing: -0.025em; }
    News article page
    ============================================================= */
 .article { background: var(--bg); padding-top: clamp(120px, 14vh, 180px); }
-.art-container { max-width: 920px; }
+.art-container { max-width: 1140px; }
+.art-lead, .art-body { max-width: 920px; }
 .art-back { display: inline-flex; align-items: center; gap: 8px; font-size: var(--step--1); font-weight: 500; color: var(--ink-soft); margin-bottom: 34px; transition: color .25s, gap .25s; }
 .art-back:hover { color: var(--accent-deep); gap: 11px; }
 .art-back svg { width: 16px; height: 16px; }

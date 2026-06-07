@@ -52,6 +52,7 @@ window.LUCA_ZH = {
 "Interactions with our AI instant messaging platform": "与我们 AI 即时通讯平台的交互次数",
 "npj Digital Medicine — a device-invariant multimodal learning framework for respiratory disease classification. Single-modality models range AUROC 0.67–0.88.": "npj Digital Medicine —— 一种用于呼吸疾病分类的设备无关多模态学习框架。单模态模型 AUROC 区间为 0.67–0.88。",
 "From community screening to global pharma.": "从社区筛查到全球药企。",
+"From community screening to global pharma partnerships.": "从社区筛查到全球药企合作。",
 "Talk to our team": "联系我们的团队",
 "AI Screening Software": "临床试验解决方案",
 "Clinical Trial Solutions": "临床试验解决方案",

@@ -17,7 +17,6 @@ python3 -m http.server 8080
 ```
 
 To put it live, upload the **contents of this folder** to any static host
-(Netlify, Vercel, Cloudflare Pages, S3, nginx, etc.). No compilation needed.
 
 ---
 
@@ -101,16 +100,7 @@ Form fields (names): `name`, `email`, `company`, `title`, `country`,
 
 ---
 
-## Deployment checklist
 
-- [ ] Serve over **HTTPS** (free on Netlify/Vercel/Cloudflare). Important — the
-      site collects names/emails via the contact form.
-- [ ] Wire the contact form to a backend / form service (see above).
-- [ ] Final content proofread — the news article bodies and the homepage stats
-      should be verified against approved figures before launch.
-- [ ] (Optional) Add social/OG meta tags + share image, and a custom 404 page.
-
----
 
 ## Notes
 

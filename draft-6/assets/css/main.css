@@ -551,6 +551,28 @@ h1, h2, h3 { font-weight: 300; line-height: 1.05; letter-spacing: -0.025em; }
 .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
 /* =============================================================
+   News article page
+   ============================================================= */
+.article { background: var(--bg); padding-top: clamp(120px, 14vh, 180px); }
+.art-container { max-width: 760px; }
+.art-back { display: inline-flex; align-items: center; gap: 8px; font-size: var(--step--1); font-weight: 500; color: var(--ink-soft); margin-bottom: 34px; transition: color .25s, gap .25s; }
+.art-back:hover { color: var(--accent-deep); gap: 11px; }
+.art-back svg { width: 16px; height: 16px; }
+.art-tag { display: inline-block; font-size: var(--step--1); font-weight: 600; letter-spacing: 0.04em; color: var(--accent-deep); padding: 5px 13px; border-radius: 999px; background: rgba(0,158,223,0.1); margin-bottom: 22px; }
+.art-title { font-size: var(--step-3); font-weight: 300; line-height: 1.12; letter-spacing: -0.025em; color: var(--ink); }
+.art-meta { margin-top: 20px; font-size: var(--step--1); color: var(--ink-muted); font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; }
+.art-lead { margin-top: 30px; font-size: var(--step-1); line-height: 1.5; font-weight: 500; color: var(--ink); padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+.art-body { margin-top: 34px; }
+.art-body > p { font-size: var(--step-0); line-height: 1.72; color: var(--ink-soft); margin-bottom: 24px; }
+.art-body em { font-style: italic; }
+.art-body strong { color: var(--ink); font-weight: 600; }
+.art-h { font-size: var(--step-1); font-weight: 600; letter-spacing: -0.01em; color: var(--ink); margin: 40px 0 18px; }
+.art-list { margin: 0 0 24px; padding-left: 22px; display: flex; flex-direction: column; gap: 12px; }
+.art-list li { font-size: var(--step-0); line-height: 1.6; color: var(--ink-soft); }
+.art-quote { margin: 34px 0; padding: 26px 30px; background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius-lg); font-size: var(--step-1); line-height: 1.5; font-weight: 400; color: var(--ink); }
+.art-quote cite { display: block; margin-top: 16px; font-size: var(--step--1); font-style: normal; font-weight: 600; color: var(--accent-deep); letter-spacing: 0.01em; }
+
+/* =============================================================
    Footer
    ============================================================= */
 .footer { background: var(--bg-2); border-top: 1px solid var(--line); padding-top: clamp(60px, 8vw, 92px); }

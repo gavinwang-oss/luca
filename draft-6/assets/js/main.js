@@ -125,6 +125,41 @@
     if (saved === 'zh') apply('zh'); else apply('en');
   })();
 
+  /* Resources carousel — paged slide, arrows disable at ends */
+  (function () {
+    var track = document.getElementById('resTrack');
+    var prev = document.getElementById('resPrev');
+    var next = document.getElementById('resNext');
+    if (!track || !prev || !next) return;
+    var cards = [].slice.call(track.children);
+    if (!cards.length) return;
+    var index = 0; // index of the left-most visible card
+
+    function perView() {
+      var w = window.innerWidth;
+      if (w <= 560) return 1;
+      if (w <= 900) return 2;
+      return 4;
+    }
+    function maxIndex() { return Math.max(0, cards.length - perView()); }
+    function step() {
+      // card width + gap
+      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || '22') || 22;
+      return cards[0].getBoundingClientRect().width + gap;
+    }
+    function update() {
+      if (index > maxIndex()) index = maxIndex();
+      track.style.transform = 'translateX(' + (-index * step()) + 'px)';
+      prev.disabled = index <= 0;
+      next.disabled = index >= maxIndex();
+    }
+    prev.addEventListener('click', function () { index = Math.max(0, index - perView()); update(); });
+    next.addEventListener('click', function () { index = Math.min(maxIndex(), index + perView()); update(); });
+    var rt;
+    window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(update, 150); }, { passive: true });
+    update();
+  })();
+
   /* Contact form (design preview — not wired to a live endpoint) */
   const cf = document.getElementById('contactForm');
   if (cf) {

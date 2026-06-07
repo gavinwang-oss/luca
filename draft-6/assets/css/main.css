@@ -34,7 +34,7 @@
   --step-3:  clamp(2.2rem, 1.7rem + 2.4vw, 3.6rem);
   --hero:    clamp(2.7rem, 1.4rem + 6.2vw, 6.6rem);
 
-  --maxw:   1200px;
+  --maxw:   1320px;
   --gutter: clamp(20px, 5vw, 72px);
   --radius: 16px;
   --radius-lg: 26px;
@@ -554,7 +554,7 @@ h1, h2, h3 { font-weight: 300; line-height: 1.05; letter-spacing: -0.025em; }
    News article page
    ============================================================= */
 .article { background: var(--bg); padding-top: clamp(120px, 14vh, 180px); }
-.art-container { max-width: 760px; }
+.art-container { max-width: 920px; }
 .art-back { display: inline-flex; align-items: center; gap: 8px; font-size: var(--step--1); font-weight: 500; color: var(--ink-soft); margin-bottom: 34px; transition: color .25s, gap .25s; }
 .art-back:hover { color: var(--accent-deep); gap: 11px; }
 .art-back svg { width: 16px; height: 16px; }

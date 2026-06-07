@@ -38,6 +38,7 @@ window.LUCA_ZH = {
 "Proof at Scale": "规模化验证",
 "Built on the world's largest respiratory dataset.": "建立在全球最大的呼吸疾病数据集之上。",
 "Built on structured, labeled, AI-ready datasets.": "建立在结构化、精准标注、可直接用于 AI 的数据集之上。",
+"Starting in respiratory and expanding across chronic disease — validated in peer-reviewed research, regulatory milestones and large-scale real-world deployments.": "从呼吸领域起步，并向更广泛的慢病领域拓展——经同行评审研究、注册审批里程碑与大规模真实世界落地验证。",
 "Acoustic samples in the world's largest respiratory-disease database": "全球最大呼吸疾病数据库中的声学样本量",
 "Multimodal AUROC across 7 respiratory diseases": "7 种呼吸疾病的多模态 AUROC",
 "Community hospitals in China's largest COPD screening program": "中国最大慢阻肺筛查项目覆盖的社区医院",

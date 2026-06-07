@@ -500,8 +500,9 @@ h1, h2, h3 { font-weight: 300; line-height: 1.05; letter-spacing: -0.025em; }
 .page-hero h1 { font-size: var(--step-3); font-weight: 300; letter-spacing: -0.03em; }
 .page-hero-sub { color: var(--ink-soft); font-size: var(--step-1); max-width: 52ch; margin-top: 18px; }
 .res-list-sec { background: var(--bg); }
-.res-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 52px; }
+.res-head { max-width: 760px; margin: 0 auto 52px; text-align: center; }
 .res-head h2 { font-size: var(--step-3); margin-top: 20px; }
+.res-head .lead { color: var(--ink-soft); font-size: var(--step-1); margin-top: 22px; }
 .res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .res-card {
   display: flex; flex-direction: column;

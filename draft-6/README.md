@@ -110,12 +110,17 @@ Form fields (names): `name`, `email`, `company`, `title`, `country`,
       should be verified against approved figures before launch.
 - [ ] (Optional) Add social/OG meta tags + share image, and a custom 404 page.
 
+> ✅ Fonts are self-hosted (no Google CDN) — the site has no external runtime
+> dependencies and loads reliably in mainland China.
+
 ---
 
 ## Notes
 
-- Fonts: **Inter**, loaded from Google Fonts CDN (requires internet; standard
-  for live sites).
+- Fonts: **Inter** (variable, latin subset) is **self-hosted** in
+  `assets/fonts/inter-latin.woff2` and loaded via `@font-face` in `main.css` —
+  no external CDN, so the site loads reliably in mainland China where Google
+  Fonts is blocked. The site has **zero external resource dependencies**.
 - Brand: single cyan accent `#009EDF`, warm cream background, Heroicons inline
   SVG icons. Design language documented implicitly in `assets/css/main.css`
   (CSS custom properties at the top of the file).

@@ -3,6 +3,16 @@
    Cream background · editorial type · animated lung centerpiece
    ============================================================= */
 
+/* Self-hosted Inter (variable, latin) — no external CDN so the site
+   loads reliably in mainland China where Google Fonts is blocked. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("../fonts/inter-latin.woff2") format("woff2");
+}
+
 :root {
   /* Surfaces — warm light palette (Owkin-style cream) */
   --bg:        #F7F3EE;   /* warm cream page background */

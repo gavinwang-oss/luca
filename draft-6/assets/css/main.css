@@ -287,7 +287,7 @@ h1, h2, h3 { font-weight: 300; line-height: 1.05; letter-spacing: -0.025em; }
 /* node halo — pulses outward exactly when the comet arrives */
 .fw-halo { fill: none; stroke: var(--accent); stroke-width: 2.5; opacity: 0;
   transform-box: fill-box; transform-origin: center;
-  animation: fwArrive 9s ease-out infinite; animation-delay: var(--d, 0s); }
+  animation: fwArrive 5s ease-out infinite; animation-delay: var(--d, 0s); }
 @keyframes fwArrive {
   0%   { opacity: 0.75; transform: scale(1); }
   16%  { opacity: 0;    transform: scale(1.22); }

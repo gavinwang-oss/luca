@@ -391,9 +391,9 @@ h1, h2, h3 { font-weight: 300; line-height: 1.05; letter-spacing: -0.025em; }
    Stats band
    ============================================================= */
 .stats-band { background: var(--bg-2); }
-.stats-head { max-width: 760px; margin-bottom: 56px; }
+.stats-head { max-width: 760px; margin-bottom: 24px; }
 .stats-head h2 { font-size: var(--step-3); margin-top: 20px; }
-.stats-head .lead { color: var(--ink-soft); font-size: var(--step-1); margin-top: 22px; }
+.stats-intro { max-width: 640px; color: var(--ink-soft); font-size: var(--step-0); margin: 0 0 28px; }
 .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; }
 .stat { background: var(--bg); padding: 38px 32px; display: flex; flex-direction: column; gap: 12px; transition: background .35s; }
 .stat:hover { background: #fff; }
